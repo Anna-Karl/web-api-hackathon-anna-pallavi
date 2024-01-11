@@ -32,28 +32,36 @@
                     <p>Enter Amount</p>
                     <input value="100" type="text"/>
                 </div>
+
                 <div class="dropdown">
+
                     <div class="from">
                         <p>From</p>
                         <div class="select-container">
                             <img src="https://flagsapi.com/CA/flat/64.png">
-                            <select name="from">
+                            <select class="select" name="from" id="from" required>
                                 <option value="CAN">CAN</option>
-                                <option value="USD">USD</option>
+                                <!-- <option value="" disabled selected hidden>Choose currency</option> -->
                             </select>
                         </div>
                     </div>
-                    <i class="fa-solid fa-rotate"></i>
+                    
+                    <div class="form-select__icon">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                        
+
                     <div class="to">
                         <p>To</p>
                         <div class="select-container">
                             <img src="https://flagsapi.com/US/flat/64.png">
-                            <select name="to">
-                                <option value="CAN">CAN</option>
-                                <option value="USD" selected>USD</option>
+                            <select class="select" name="to" id="to" required>
+                                <!-- <option value="USD">USD</option> -->
+                                <option value="" disabled selected hidden>Choose currency</option>
                             </select>
                         </div>
                     </div>
+
                 </div>
                 <div class="msg">1 CAN = 0.75 USD</div>
                 <button class="button">Get Exchange Rate</button>
@@ -63,7 +71,6 @@
     <footer class="footer">
         <h4 class="footer__copyright">©️ 2024 Made by Anna Karlova & Pallavi Singla</h4>
     </footer>
-    <script src="code.js"></script>
-    <script src="api.js"></script>
+    <script src="./scripts/index.js" type="module"></script>
 </body>
 </html>
