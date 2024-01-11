@@ -3,48 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link 
         rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
         crossorigin="anonymous" 
         referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Currency Converter</title>
 </head>
 <body>
-    <div class="container">
-        <h2>Currency Converter</h2>
-        <form>
-            <div class="amount">
-                <p>Enter Amount</p>
-                <input value="100" type="text"/>
-            </div>
-            <div class="dropdown">
-                <div class="from">
-                    <p>From</p>
-                    <div class="select-container">
-                        <img src="https://flagsapi.com/CA/flat/64.png">
-                        <select name="from">
-                            <option value="CAN">CAN</option>
-                            <option value="USD">USD</option>
-                        </select>
+    <header class="header">
+        <ul class="header__list">
+            <li class="header__item"><a href="/index.html">Converter</a></li>
+            <li class="header__item"><a href="https://www.koverly.com/currencies">Currency Profiles</a></li>
+            <li class="header__item" id="currentDateDisplay"></li>
+        </ul>
+        
+    </header>
+    <main>
+        <div class="container">
+            <h2 class="container__title">Currency Converter</h2>
+            <form>
+                <div class="amount">
+                    <p>Enter Amount</p>
+                    <input value="100" type="text"/>
+                </div>
+                <div class="dropdown">
+                    <div class="from">
+                        <p>From</p>
+                        <div class="select-container">
+                            <img src="https://flagsapi.com/CA/flat/64.png">
+                            <select name="from">
+                                <option value="CAN">CAN</option>
+                                <option value="USD">USD</option>
+                            </select>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-rotate"></i>
+                    <div class="to">
+                        <p>To</p>
+                        <div class="select-container">
+                            <img src="https://flagsapi.com/US/flat/64.png">
+                            <select name="to">
+                                <option value="CAN">CAN</option>
+                                <option value="USD" selected>USD</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                <div class="to">
-                    <p>To</p>
-                    <div class="select-container">
-                        <img src="https://flagsapi.com/US/flat/64.png">
-                        <select name="from">
-                            <option value="CAN">CAN</option>
-                            <option value="USD" selected>USD</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div class="msg">1 CAN = 0.75 USD</div>
-            <button>Get Exchange Rate</button>
-        </form>
-    </div>
+                <div class="msg">1 CAN = 0.75 USD</div>
+                <button class="button">Get Exchange Rate</button>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <h4 class="footer__copyright">©️ 2024 Made by Anna Karlova & Pallavi Singla</h4>
+    </footer>
+    <script src="code.js"></script>
+    <script src="api.js"></script>
 </body>
 </html>
