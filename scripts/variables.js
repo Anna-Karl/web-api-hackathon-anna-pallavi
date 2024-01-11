@@ -1,5 +1,5 @@
 export default {
-  successs: 'success',
+  success: 'success',
   selects: document.querySelectorAll('.select'),
 };
 
